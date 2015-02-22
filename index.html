@@ -5,9 +5,9 @@
 	</head>
 
 	<body>
-		<img src="img/iandreea.png" width="100%">
+		<img id="poza" src="img/iandreea.png" width="100%">
 		<div class="illustration" style="width: 110%; height: 110%; padding-bottom: 10px;">
-			<script src="http://cdn.tagul.com/embed/kxt64vs4xba7"></script>
+			<script id="superscript" src="http://cdn.tagul.com/embed/kxt64vs4xba7"></script>
 		</div>
 	 </body>
   
@@ -48,6 +48,16 @@
 				document.onmousedown = clickIE4; 
 			} 
 			document.oncontextmenu = new Function("alert(message);return false") 
+			
+
+		if (screen.height <= 700px || screen.width <= 700px) 
+		{
+		prompt("a intrat aicisa");
+		//document.location = "yourmobilepage.html";
+		document.getElementById("poza").src = "img/iandreea-mobile.png"; 
+		document.getElementById("superscript").src = ""; 
+		}
+
 	</script>
 	
 	<style>
