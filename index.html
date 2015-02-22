@@ -5,17 +5,21 @@
 	</head>
 
 	<body>
+        <div class="mobile">
+         <img src="img/iandreea-mobile.png" style="width:100%;" />
+        </div>
+        <div class="big">
 		<img id="poza" src="img/iandreea.png" width="100%">
 		<div class="illustration" style="width: 110%; height: 110%; padding-bottom: 10px;">
 			<script id="superscript" src="http://cdn.tagul.com/embed/kxt64vs4xba7"></script>
 		</div>
+            </div>
 	 </body>
   
   
 	<footer>
 		<div class="text"> copyright &copy 2015 Andreea-Daniela Ene</div>
 	</footer>
-
 
 	<script> 
 		var message = "Nope, don't take the picture!"; 
@@ -47,17 +51,7 @@
 			{ 
 				document.onmousedown = clickIE4; 
 			} 
-			document.oncontextmenu = new Function("alert(message);return false") 
-			
-
-		if (screen.height <= 700px || screen.width <= 700px) 
-		{
-		prompt("a intrat aicisa");
-		//document.location = "yourmobilepage.html";
-		document.getElementById("poza").src = "img/iandreea-mobile.png"; 
-		document.getElementById("superscript").src = ""; 
-		}
-
+			document.oncontextmenu = new Function("alert(message);return false");
 	</script>
 	
 	<style>
@@ -66,9 +60,9 @@
 			text-align: center;
 			left: 45%;
 			font-size: 10px;
-			bottom: -150%;
+			bottom: -152.5%;
 			position: absolute;
-			width: inherit;				
+			width: inherit;		
 		}
 		
 		img {
@@ -80,6 +74,21 @@
 			position: absolute;
 			top: 40%;
 			left: -40%;
+		}
+		.mobile{
+        display: none;
+		}
+		
+		@media(max-width:700px){
+		    .big{
+		        display: none;
+			}
+		    .mobile{
+		        display: block;
+			}
+			.text{
+				display: none;
+			}
 		}
 	</style>
 </html>
